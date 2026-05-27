@@ -50,11 +50,11 @@ under the License.
         if(tile.getAttribute('class').indexOf('normalItem')==-1) {
             isFavorite = 'false' ;
             tile.setAttribute('class','hp-menu-item normalItem') ;
-            imgTile.setAttribute('src','/rainbowstone/images/star-white.svg')
+            imgTile.setAttribute('src','/tabler/images/star-white.svg')
         } else {
             isFavorite = 'true' ;
             tile.setAttribute('class','hp-menu-item') ;
-            imgTile.setAttribute('src','/rainbowstone/images/star-yellow.svg')
+            imgTile.setAttribute('src','/tabler/images/star-yellow.svg')
         }
         setUserLayoutPreferences('HOME_MENU_FAVORITES', itemMenu, isFavorite);
     }
@@ -82,7 +82,7 @@ under the License.
 <#if userLogin?has_content>
     <div id="main-navigation-bar" class="fixed-nav-bar">
         <div id="main-nav-bar-left">
-            <img id="homeGlyph" src="/rainbowstone/images/home.svg" alt="Home">
+            <img id="homeGlyph" src="/tabler/images/home.svg" alt="Home">
             <span id="homePageTitle">Home Page</span>
             <label class="main-bar-label">${uiLabelMap.EmbiHomeMenuDisplayAllMenu}</label>
             <input id="showHideBtn" type="checkbox" class="nrd-chkbox" <#if "true" == displayFavorites>checked</#if> onchange="showHideFavorites()">
@@ -91,7 +91,7 @@ under the License.
         </div> <!-- main-nav-bar-left -->
         <div id="main-nav-bar-right">
             <div id="company-logo"></div>
-            <#include "component://rainbowstone/template/includes/Avatar.ftl"/>
+            <#include "component://tabler/template/includes/Avatar.ftl"/>
         </div>  <!-- main-nav-bar-right -->
     </div> <!-- main navigation bar -->
     <div id="nav-bar-offset"></div>
@@ -110,7 +110,7 @@ under the License.
                     <li  id="Tile${tileNumber}" class="hp-menu-item <#if "white" == itemMenu.favorite>normalItem<#else>favoriteItem</#if>">
                         <a href="${itemMenu.urlLink}" class="menu-link" title="${itemMenu.menuTitle}">${menuTitle}</a>
                         <a href="javascript:addToFavorite('Tile${tileNumber}', '${itemMenu.urlLink}')" title="${uiLabelMap.ClicToAddInFavorite}">
-                            <img id='imgTile${tileNumber}' class="star-link" src="/rainbowstone/images/star-${itemMenu.favorite}.svg">
+                            <img id='imgTile${tileNumber}' class="star-link" src="/tabler/images/star-${itemMenu.favorite}.svg">
                         </a>
                     </li>
                 </#if>

@@ -1,30 +1,20 @@
-<#--
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
--->
-<div id="footer-offset"></div>
-<div id="footer">
-    <span>${nowTimestamp?datetime?string.short} - <a href="<@ofbizUrl>ListTimezones</@ofbizUrl>">${timeZone.toZoneId().getDisplayName(Static["java.time.format.TextStyle"].FULL_STANDALONE, locale)}</a></span>
-    <span>${uiLabelMap.CommonCopyright} (c) 2001-${nowTimestamp?string("yyyy")}
-        <a href="http://www.apache.org" target="_blank">The Apache Software Foundation</a>. ${uiLabelMap.CommonPoweredBy}
-        <a href="http://ofbiz.apache.org" target="_blank">Apache OFBiz.</a> ${uiLabelMap.CommonRelease}
-        <#include "ofbizhome://VERSION" ignore_missing=true/>
-        <#include "ofbizhome://runtime/GitInfo.ftl" ignore_missing=true/>
-    </span>
+<div class="page-footer d-print-none">
+  <div class="container-xl">
+    <div class="row text-center align-items-center flex-row-reverse">
+      <div class="col-lg-auto ms-lg-auto">
+        <div class="text-secondary">${nowTimestamp?datetime?string.short}</div>
+      </div>
+      <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+        <div class="text-secondary">
+          ${uiLabelMap.CommonCopyright} © 2001-${nowTimestamp?string("yyyy")}
+          <a href="http://www.apache.org" target="_blank">ASF</a> · ${uiLabelMap.CommonPoweredBy}
+          <a href="http://ofbiz.apache.org" target="_blank">Apache OFBiz</a>
+          <#include "ofbizhome://VERSION" ignore_missing=true/>
+          <#include "ofbizhome://runtime/GitInfo.ftl" ignore_missing=true/>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 <#if layoutSettings.VT_FTR_JAVASCRIPT?has_content>
