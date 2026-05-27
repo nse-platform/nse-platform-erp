@@ -45,13 +45,16 @@ under the License.
         <property name="VT_STYLESHEET['add']" value="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler.min.css"/>
         <property name="VT_STYLESHEET['add']" value="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler-flags.min.css"/>
         <property name="VT_STYLESHEET['add']" value="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler-payments.min.css"/>
-        <property name="VT_STYLESHEET['add']" value="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler-social.min.css"/>
-        <property name="VT_STYLESHEET['add']" value="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler-vendors.min.cs"/>
+<!--        <property name="VT_STYLESHEET['add']" value="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler-social.min.css"/>-->
+<!--        <property name="VT_STYLESHEET['add']" value="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler-vendors.min.cs"/>-->
     </theme-properties>
 
     <templates>
         <template name="screen" type="html" content-type="UTF-8" encoding="none" encoder="html" compress="false">
+            <template-file widget="form" location="component://tabler/template/macro/HtmlFormMacroLibrary.ftl"/>
             <template-file widget="menu" location="component://tabler/template/macro/HtmlMenuMacroLibrary.ftl"/>
+            <template-file widget="screen" location="component://tabler/template/macro/HtmlScreenMacroLibrary.ftl"/>
+            <template-file widget="tree" location="component://tabler/template/macro/HtmlTreeMacroLibrary.ftl"/>
         </template>
     </templates>
 </theme>
